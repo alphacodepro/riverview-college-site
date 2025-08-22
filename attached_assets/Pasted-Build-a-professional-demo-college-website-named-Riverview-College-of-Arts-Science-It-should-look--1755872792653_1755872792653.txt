@@ -1,0 +1,99 @@
+Build a professional demo college website named Riverview College of Arts & Science. It should look realistic and polished like a real institution’s site.
+
+General Rules:
+
+The website should have 4 pages only:
+
+Home (index.html)
+
+About Us (about.html)
+
+Academics (academics.html)
+
+Admissions (admissions.html)
+
+Each page must have its own CSS file (e.g., style.css, about.css, academics.css, admissions.css).
+
+The theme and main styles (colors, fonts, navbar design, footer style) should stay the same across all pages for consistency.
+
+The navbar must be identical on every page, with the correct link highlighted (active) depending on which page is open.
+
+The website should be responsive and clean, with sections styled neatly (using grid or flex where appropriate).
+
+Do not add extra pages beyond these four.
+
+Content Requirements:
+
+Home Page (index.html)
+
+Hero banner with headline, subtext, and “Apply Now” button.
+
+Welcome section with a short intro about the college.
+
+Programs section (cards for courses offered like B.Sc, B.A, B.Com, M.Sc).
+
+Campus life section with a 3-image gallery.
+
+Testimonials (2 alumni quotes).
+
+News & Updates (list of latest news).
+
+Events section (3 upcoming events in card layout).
+
+Why Choose Us section (bullet list of advantages).
+
+Call-to-action (Apply Today button).
+
+Footer (college info, contact details, address).
+
+About Page (about.html)
+
+Heading + About Riverview College intro.
+
+College history, mission, vision.
+
+Leadership / faculty section.
+
+Campus facilities.
+
+Footer same as other pages.
+
+Academics Page (academics.html)
+
+Heading + academic philosophy.
+
+Departments/programs list (with short descriptions).
+
+Research opportunities.
+
+Academic resources (library, labs, etc).
+
+Footer same as other pages.
+
+Admissions Page (admissions.html)
+
+Heading + admissions overview.
+
+Admission process steps (bullet/numbered).
+
+Important dates.
+
+Eligibility requirements.
+
+Apply now button linking to a form (dummy placeholder).
+
+Footer same as other pages.
+
+Styling:
+
+Navbar: horizontal menu, logo left, links right, highlight active page.
+
+Colors: professional scheme (blue/white/gray).
+
+Buttons: styled with hover effects.
+
+Cards and sections should have clean shadows, padding, spacing.
+
+Footer: dark background, white text, consistent on all pages.
+
+Each CSS file should control its own page, but keep the core theme consistent."*
