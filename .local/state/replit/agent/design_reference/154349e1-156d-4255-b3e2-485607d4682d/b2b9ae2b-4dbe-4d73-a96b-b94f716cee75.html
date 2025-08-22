@@ -1,0 +1,1237 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riverview College of Arts & Science - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Crimson Text', 'serif'],
+                    },
+                    colors: {
+                        'college-navy': '#1e3a8a',
+                        'college-blue': '#3b82f6',
+                        'college-gold': '#f59e0b',
+                        'college-slate': '#64748b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+        .active-nav {
+            background-color: #f59e0b;
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    
+    <!-- Navigation Bar - Consistent across all pages -->
+    <!-- @COMPONENT: NavigationBar [active page highlighting] -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-college-navy text-2xl mr-3"></i>
+                        <span class="font-serif font-semibold text-xl text-college-navy">Riverview College</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="active-nav px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" data-page="home">Home</a>
+                        <a href="#about" class="text-college-slate hover:text-college-navy hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" data-page="about">About Us</a>
+                        <a href="#academics" class="text-college-slate hover:text-college-navy hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" data-page="academics">Academics</a>
+                        <a href="#admissions" class="text-college-slate hover:text-college-navy hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" data-page="admissions">Admissions</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-btn text-college-slate hover:text-college-navy">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="active-nav block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="text-college-slate hover:text-college-navy block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="#academics" class="text-college-slate hover:text-college-navy block px-3 py-2 rounded-md text-base font-medium">Academics</a>
+                <a href="#admissions" class="text-college-slate hover:text-college-navy block px-3 py-2 rounded-md text-base font-medium">Admissions</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: NavigationBar -->
+
+    <!-- PAGE CONTENT CONTAINER -->
+    <div class="page-container" data-current-page="home">
+        
+        <!-- HOME PAGE CONTENT -->
+        <div id="home" class="page-content">
+            <!-- Hero Section -->
+            <!-- @COMPONENT: HeroSection [call-to-action, background image] -->
+            <section class="hero-gradient text-white py-20 lg:py-32">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                            Riverview College of<br>Arts & Science
+                        </h1>
+                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100">
+                            Shaping tomorrow's leaders through academic excellence, innovation, and community engagement since 1985.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg" data-implementation="Link to admissions form">
+                                <i class="fas fa-paper-plane mr-2"></i>Apply Now
+                            </button>
+                            <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-college-navy transition-all duration-300">
+                                <i class="fas fa-play-circle mr-2"></i>Virtual Tour
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- @END_COMPONENT: HeroSection -->
+
+            <!-- Welcome Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Welcome to Excellence</h2>
+                        <p class="text-lg text-college-slate max-w-3xl mx-auto">
+                            At Riverview College, we foster an environment where academic rigor meets creative exploration. 
+                            Our diverse community of scholars, researchers, and innovators work together to push the boundaries of knowledge and prepare students for successful careers in an ever-evolving world.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="bg-college-blue w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-book-open text-white text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Academic Excellence</h3>
+                            <p class="text-college-slate">Rigorous curriculum designed to challenge and inspire students across all disciplines.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Community Focus</h3>
+                            <p class="text-college-slate">Building lasting relationships and networks that extend far beyond graduation.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-lightbulb text-white text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Innovation</h3>
+                            <p class="text-college-slate">Cutting-edge research opportunities and state-of-the-art facilities for hands-on learning.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Programs Section -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Our Programs</h2>
+                        <p class="text-lg text-college-slate">Discover your passion through our comprehensive academic offerings</p>
+                    </div>
+                    <!-- @MAP: programs.map(program => ( -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-flask text-college-blue text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-3">Bachelor of Science</h3>
+                            <p class="text-college-slate mb-4">Comprehensive science programs including Biology, Chemistry, Physics, and Mathematics.</p>
+                            <a href="#academics" class="text-college-blue font-medium hover:underline">Learn More →</a>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-palette text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-3">Bachelor of Arts</h3>
+                            <p class="text-college-slate mb-4">Liberal arts education with majors in Literature, History, Philosophy, and Fine Arts.</p>
+                            <a href="#academics" class="text-college-blue font-medium hover:underline">Learn More →</a>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-3">Bachelor of Commerce</h3>
+                            <p class="text-college-slate mb-4">Business-focused curriculum covering Accounting, Finance, Marketing, and Management.</p>
+                            <a href="#academics" class="text-college-blue font-medium hover:underline">Learn More →</a>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-3">Master of Science</h3>
+                            <p class="text-college-slate mb-4">Advanced graduate programs for specialized research and professional development.</p>
+                            <a href="#academics" class="text-college-blue font-medium hover:underline">Learn More →</a>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </section>
+
+            <!-- Campus Life Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Campus Life</h2>
+                        <p class="text-lg text-college-slate">Experience vibrant student life at our beautiful riverside campus</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Modern university campus with red brick buildings and green quad -->
+                        <div class="relative overflow-hidden rounded-lg card-shadow">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Campus Buildings" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                                <div class="p-6 text-white">
+                                    <h3 class="font-semibold text-xl mb-2">Historic Campus</h3>
+                                    <p>Beautiful architecture and modern facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Group of diverse college students studying together in library -->
+                        <div class="relative overflow-hidden rounded-lg card-shadow">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Students Studying" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                                <div class="p-6 text-white">
+                                    <h3 class="font-semibold text-xl mb-2">Study Groups</h3>
+                                    <p>Collaborative learning environments</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- College graduation ceremony with students in caps and gowns -->
+                        <div class="relative overflow-hidden rounded-lg card-shadow">
+                            <img src="https://pixabay.com/get/g63e653b677bd37cb7b31921bab18893b58b0374c5a4d0c1b3a367a189cff36ee67d377dc591b1b6dc340b01b9ed1e9797ab3d7c804fa8fba0efa25bce1ea3178_1280.jpg" alt="Graduation Ceremony" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                                <div class="p-6 text-white">
+                                    <h3 class="font-semibold text-xl mb-2">Graduation</h3>
+                                    <p>Celebrating academic achievements</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Alumni Success Stories</h2>
+                        <p class="text-lg text-college-slate">Hear from our graduates making a difference in the world</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card-shadow bg-white rounded-lg p-8">
+                            <div class="mb-6">
+                                <i class="fas fa-quote-left text-college-gold text-2xl mb-4"></i>
+                                <p class="text-college-slate text-lg leading-relaxed" data-mock="true">
+                                    "Riverview College didn't just provide me with an education – it gave me the confidence to pursue my dreams. 
+                                    The mentorship from faculty and the research opportunities opened doors I never imagined possible."
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-college-navy" data-mock="true">Dr. Sarah Mitchell</h4>
+                                    <p class="text-college-slate" data-mock="true">Class of 2015, Research Scientist at NASA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-8">
+                            <div class="mb-6">
+                                <i class="fas fa-quote-left text-college-gold text-2xl mb-4"></i>
+                                <p class="text-college-slate text-lg leading-relaxed" data-mock="true">
+                                    "The liberal arts education at Riverview taught me to think critically and communicate effectively. 
+                                    These skills have been invaluable in my career as a social entrepreneur."
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-college-navy" data-mock="true">Marcus Johnson</h4>
+                                    <p class="text-college-slate" data-mock="true">Class of 2018, Founder of GreenTech Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News & Updates Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">News & Updates</h2>
+                        <p class="text-lg text-college-slate">Stay informed about the latest developments at Riverview College</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <article class="card-shadow bg-white rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <div class="text-college-gold font-medium text-sm mb-2" data-mock="true">March 15, 2024</div>
+                                <h3 class="font-semibold text-xl mb-3 text-college-navy" data-mock="true">New Research Center Opens</h3>
+                                <p class="text-college-slate mb-4" data-mock="true">
+                                    The state-of-the-art Riverside Research Center for Environmental Sciences officially opened its doors, featuring cutting-edge laboratories and sustainable design elements.
+                                </p>
+                                <a href="#" class="text-college-blue font-medium hover:underline" data-mock="true">Read More →</a>
+                            </div>
+                        </article>
+                        <article class="card-shadow bg-white rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <div class="text-college-gold font-medium text-sm mb-2" data-mock="true">March 10, 2024</div>
+                                <h3 class="font-semibold text-xl mb-3 text-college-navy" data-mock="true">Student Wins National Award</h3>
+                                <p class="text-college-slate mb-4" data-mock="true">
+                                    Emma Rodriguez, a senior Biology major, received the prestigious National Science Foundation Graduate Research Fellowship for her work on marine ecosystems.
+                                </p>
+                                <a href="#" class="text-college-blue font-medium hover:underline" data-mock="true">Read More →</a>
+                            </div>
+                        </article>
+                        <article class="card-shadow bg-white rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <div class="text-college-gold font-medium text-sm mb-2" data-mock="true">March 5, 2024</div>
+                                <h3 class="font-semibold text-xl mb-3 text-college-navy" data-mock="true">Spring Concert Series</h3>
+                                <p class="text-college-slate mb-4" data-mock="true">
+                                    The Music Department announces its Spring Concert Series featuring performances by student ensembles and guest artists from around the region.
+                                </p>
+                                <a href="#" class="text-college-blue font-medium hover:underline" data-mock="true">Read More →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Upcoming Events</h2>
+                        <p class="text-lg text-college-slate">Join us for these exciting campus events</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="card-shadow bg-white rounded-lg p-6 border-l-4 border-college-blue">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-college-blue text-white rounded-lg p-3 mr-4">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div>
+                                    <div class="text-college-gold font-semibold" data-mock="true">April 15, 2024</div>
+                                    <div class="text-sm text-college-slate" data-mock="true">2:00 PM - 4:00 PM</div>
+                                </div>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2" data-mock="true">Spring Open House</h3>
+                            <p class="text-college-slate mb-4" data-mock="true">Explore our campus, meet faculty, and learn about our programs. Perfect for prospective students and families.</p>
+                            <a href="#" class="text-college-blue font-medium hover:underline" data-mock="true">Register Now →</a>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 border-l-4 border-college-gold">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-college-gold text-white rounded-lg p-3 mr-4">
+                                    <i class="fas fa-microphone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-college-gold font-semibold" data-mock="true">April 22, 2024</div>
+                                    <div class="text-sm text-college-slate" data-mock="true">7:00 PM - 9:00 PM</div>
+                                </div>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2" data-mock="true">Guest Lecture Series</h3>
+                            <p class="text-college-slate mb-4" data-mock="true">Dr. Amanda Chen discusses "Climate Change and Marine Biology" in Thompson Auditorium.</p>
+                            <a href="#" class="text-college-blue font-medium hover:underline" data-mock="true">Learn More →</a>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 border-l-4 border-purple-500">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-purple-500 text-white rounded-lg p-3 mr-4">
+                                    <i class="fas fa-theater-masks"></i>
+                                </div>
+                                <div>
+                                    <div class="text-college-gold font-semibold" data-mock="true">May 1, 2024</div>
+                                    <div class="text-sm text-college-slate" data-mock="true">8:00 PM</div>
+                                </div>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2" data-mock="true">Spring Theater Production</h3>
+                            <p class="text-college-slate mb-4" data-mock="true">The Drama Department presents Shakespeare's "A Midsummer Night's Dream" at the Riverside Theater.</p>
+                            <a href="#" class="text-college-blue font-medium hover:underline" data-mock="true">Buy Tickets →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us Section -->
+            <section class="py-16 bg-college-navy text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Why Choose Riverview College?</h2>
+                        <p class="text-xl text-blue-100">Discover what sets us apart as a premier institution of higher learning</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="bg-college-gold w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-star text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Nationally Ranked Programs</h3>
+                            <p class="text-blue-100">Multiple programs ranked in the top 25% nationally</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-gold w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Small Class Sizes</h3>
+                            <p class="text-blue-100">15:1 student-to-faculty ratio for personalized attention</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-gold w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-briefcase text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Career Services</h3>
+                            <p class="text-blue-100">95% job placement rate within 6 months of graduation</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-gold w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-dollar-sign text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Affordable Tuition</h3>
+                            <p class="text-blue-100">Competitive rates with generous financial aid packages</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-gold w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-globe text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Study Abroad</h3>
+                            <p class="text-blue-100">Partnerships with universities in 15+ countries</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-gold w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-heart text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Community Impact</h3>
+                            <p class="text-blue-100">Strong tradition of service learning and civic engagement</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call-to-Action Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Ready to Begin Your Journey?</h2>
+                    <p class="text-lg text-college-slate mb-8">
+                        Join our community of scholars, innovators, and leaders. Your future starts here at Riverview College.
+                    </p>
+                    <button class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg text-white mr-4 mb-4" data-implementation="Link to admissions application">
+                        <i class="fas fa-paper-plane mr-2"></i>Apply Today
+                    </button>
+                    <button class="border-2 border-college-navy text-college-navy px-8 py-4 rounded-lg font-semibold text-lg hover:bg-college-navy hover:text-white transition-all duration-300">
+                        <i class="fas fa-calendar mr-2"></i>Schedule Visit
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- ABOUT PAGE CONTENT -->
+        <div id="about" class="page-content hidden">
+            <!-- About Hero Section -->
+            <section class="bg-college-navy text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h1 class="font-serif text-4xl md:text-5xl font-bold mb-6">About Riverview College</h1>
+                        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                            Established in 1985, Riverview College has been a beacon of academic excellence and innovation for nearly four decades.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- College Introduction -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="font-serif text-3xl font-bold text-college-navy mb-6">Our Story</h2>
+                            <p class="text-college-slate text-lg mb-6" data-mock="true">
+                                Founded on the banks of the scenic Riverside, our college began as a small liberal arts institution with a vision to provide quality education in an intimate, supportive environment. Over the years, we have grown into a comprehensive college offering diverse programs while maintaining our commitment to personalized education.
+                            </p>
+                            <p class="text-college-slate text-lg" data-mock="true">
+                                Today, Riverview College serves over 3,000 students from across the nation and around the world, offering undergraduate and graduate programs in arts, sciences, and commerce. Our beautiful 150-acre campus combines historic buildings with modern facilities, creating an inspiring environment for learning and growth.
+                            </p>
+                        </div>
+                        <div>
+                            <!-- Historic university building with ivy-covered walls and traditional architecture -->
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Historic Campus Building" class="rounded-lg shadow-lg w-full">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission, Vision -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card-shadow bg-white rounded-lg p-8">
+                            <div class="text-center mb-6">
+                                <div class="bg-college-blue w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-bullseye text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-serif text-2xl font-bold text-college-navy">Our Mission</h3>
+                            </div>
+                            <p class="text-college-slate text-center" data-mock="true">
+                                To provide transformative educational experiences that empower students to become critical thinkers, ethical leaders, and engaged citizens who contribute meaningfully to their communities and the global society.
+                            </p>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-8">
+                            <div class="text-center mb-6">
+                                <div class="bg-college-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-eye text-white text-2xl"></i>
+                                </div>
+                                <h3 class="font-serif text-2xl font-bold text-college-navy">Our Vision</h3>
+                            </div>
+                            <p class="text-college-slate text-center" data-mock="true">
+                                To be recognized as a premier liberal arts and sciences institution that cultivates innovation, fosters intellectual curiosity, and prepares graduates to address the challenges of tomorrow with wisdom and integrity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leadership Section -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Leadership Team</h2>
+                        <p class="text-lg text-college-slate">Meet the dedicated professionals who guide our institution</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                            <h3 class="font-semibold text-xl text-college-navy mb-1" data-mock="true">Dr. Robert Anderson</h3>
+                            <p class="text-college-gold font-medium mb-3" data-mock="true">President</p>
+                            <p class="text-college-slate text-sm" data-mock="true">Ph.D. in Education Administration, Harvard University. Leading Riverview College with over 25 years of experience in higher education.</p>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                            <h3 class="font-semibold text-xl text-college-navy mb-1" data-mock="true">Dr. Maria Gonzalez</h3>
+                            <p class="text-college-gold font-medium mb-3" data-mock="true">Vice President, Academic Affairs</p>
+                            <p class="text-college-slate text-sm" data-mock="true">Ph.D. in Biochemistry, Stanford University. Overseeing curriculum development and academic excellence initiatives.</p>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                            <h3 class="font-semibold text-xl text-college-navy mb-1" data-mock="true">James Thompson</h3>
+                            <p class="text-college-gold font-medium mb-3" data-mock="true">Dean of Student Affairs</p>
+                            <p class="text-college-slate text-sm" data-mock="true">M.Ed. in Student Personnel Services, Columbia University. Dedicated to enhancing student life and campus community.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Campus Facilities -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Campus Facilities</h2>
+                        <p class="text-lg text-college-slate">World-class facilities designed to support academic and personal growth</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="bg-white rounded-lg p-6 card-shadow mb-4">
+                                <i class="fas fa-book text-college-blue text-3xl mb-3"></i>
+                                <h3 class="font-semibold text-lg mb-2">Anderson Library</h3>
+                                <p class="text-college-slate text-sm" data-mock="true">State-of-the-art library with over 500,000 volumes and 24/7 study spaces</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-white rounded-lg p-6 card-shadow mb-4">
+                                <i class="fas fa-flask text-green-600 text-3xl mb-3"></i>
+                                <h3 class="font-semibold text-lg mb-2">Science Complex</h3>
+                                <p class="text-college-slate text-sm" data-mock="true">Modern laboratories equipped with cutting-edge research equipment</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-white rounded-lg p-6 card-shadow mb-4">
+                                <i class="fas fa-dumbbell text-orange-600 text-3xl mb-3"></i>
+                                <h3 class="font-semibold text-lg mb-2">Fitness Center</h3>
+                                <p class="text-college-slate text-sm" data-mock="true">Complete fitness facility with gym, pool, and recreational courts</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-white rounded-lg p-6 card-shadow mb-4">
+                                <i class="fas fa-home text-purple-600 text-3xl mb-3"></i>
+                                <h3 class="font-semibold text-lg mb-2">Residence Halls</h3>
+                                <p class="text-college-slate text-sm" data-mock="true">Comfortable living spaces fostering community and academic success</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ACADEMICS PAGE CONTENT -->
+        <div id="academics" class="page-content hidden">
+            <!-- Academics Hero -->
+            <section class="bg-college-navy text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h1 class="font-serif text-4xl md:text-5xl font-bold mb-6">Academics</h1>
+                        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                            Discover rigorous academic programs designed to challenge, inspire, and prepare you for success in your chosen field.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academic Philosophy -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl font-bold text-college-navy mb-6">Our Academic Philosophy</h2>
+                        <p class="text-lg text-college-slate max-w-4xl mx-auto" data-mock="true">
+                            At Riverview College, we believe in the transformative power of a liberal arts and sciences education. Our approach combines rigorous academic inquiry with hands-on learning experiences, encouraging students to think critically, communicate effectively, and solve complex problems. We foster an environment where intellectual curiosity thrives and students are empowered to become lifelong learners.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Departments Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Academic Departments</h2>
+                        <p class="text-lg text-college-slate">Explore our comprehensive range of academic programs</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card-shadow bg-white rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-atom text-college-blue text-2xl"></i>
+                                </div>
+                                <h3 class="font-serif text-2xl font-bold text-college-navy">Sciences</h3>
+                            </div>
+                            <p class="text-college-slate mb-4" data-mock="true">
+                                Our science programs combine theoretical knowledge with hands-on research opportunities. Students work alongside faculty on cutting-edge projects in state-of-the-art laboratories.
+                            </p>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Biology & Environmental Science</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Chemistry & Biochemistry</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Physics & Astronomy</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Mathematics & Statistics</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-palette text-purple-600 text-2xl"></i>
+                                </div>
+                                <h3 class="font-serif text-2xl font-bold text-college-navy">Liberal Arts</h3>
+                            </div>
+                            <p class="text-college-slate mb-4" data-mock="true">
+                                Our liberal arts programs develop critical thinking, communication skills, and cultural understanding through interdisciplinary approaches to learning.
+                            </p>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">English Literature & Creative Writing</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">History & Political Science</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Philosophy & Religious Studies</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Fine Arts & Theatre</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                                </div>
+                                <h3 class="font-serif text-2xl font-bold text-college-navy">Business & Commerce</h3>
+                            </div>
+                            <p class="text-college-slate mb-4" data-mock="true">
+                                Our business programs prepare students for leadership roles in the global economy through practical experience and ethical business practices.
+                            </p>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Business Administration</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Accounting & Finance</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Marketing & Communications</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Economics</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-red-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
+                                </div>
+                                <h3 class="font-serif text-2xl font-bold text-college-navy">Graduate Programs</h3>
+                            </div>
+                            <p class="text-college-slate mb-4" data-mock="true">
+                                Advanced degree programs designed for specialized study and research, preparing graduates for leadership in their chosen fields.
+                            </p>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Master of Science Programs</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Master of Arts Programs</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Master of Business Administration</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-college-gold text-sm mr-2"></i>
+                                    <span class="text-college-slate" data-mock="true">Certificate Programs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Opportunities -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Research Opportunities</h2>
+                        <p class="text-lg text-college-slate">Engage in meaningful research alongside our distinguished faculty</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="bg-college-blue w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-microscope text-white text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-3">Undergraduate Research</h3>
+                            <p class="text-college-slate" data-mock="true">Work directly with faculty members on cutting-edge research projects, presenting findings at national conferences.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-globe text-white text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-3">International Collaborations</h3>
+                            <p class="text-college-slate" data-mock="true">Participate in global research initiatives with partner institutions around the world.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-award text-white text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-3">Research Grants</h3>
+                            <p class="text-college-slate" data-mock="true">Access to competitive research grants and funding opportunities for independent study projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academic Resources -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Academic Resources</h2>
+                        <p class="text-lg text-college-slate">Comprehensive support services to ensure your academic success</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="flex">
+                            <div class="mr-6">
+                                <!-- Modern university library interior with students studying -->
+                                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Library Interior" class="rounded-lg shadow-lg w-64 h-40 object-cover">
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-serif text-2xl font-bold text-college-navy mb-3">Anderson Library</h3>
+                                <p class="text-college-slate mb-4" data-mock="true">
+                                    Our state-of-the-art library houses over 500,000 books, journals, and digital resources. Features include collaborative study spaces, individual carrels, and 24/7 access during finals week.
+                                </p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-college-gold mr-2"></i>
+                                        <span class="text-college-slate" data-mock="true">Digital databases and online journals</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-college-gold mr-2"></i>
+                                        <span class="text-college-slate" data-mock="true">Research consultation services</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-college-gold mr-2"></i>
+                                        <span class="text-college-slate" data-mock="true">Multimedia production studio</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="mr-6">
+                                <!-- Modern science laboratory with equipment and students -->
+                                <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Science Laboratory" class="rounded-lg shadow-lg w-64 h-40 object-cover">
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-serif text-2xl font-bold text-college-navy mb-3">Research Laboratories</h3>
+                                <p class="text-college-slate mb-4" data-mock="true">
+                                    Modern laboratory facilities equipped with cutting-edge instruments for chemistry, biology, physics, and environmental science research.
+                                </p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-college-gold mr-2"></i>
+                                        <span class="text-college-slate" data-mock="true">Spectroscopy and chromatography equipment</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-college-gold mr-2"></i>
+                                        <span class="text-college-slate" data-mock="true">Cell culture and molecular biology facilities</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-college-gold mr-2"></i>
+                                        <span class="text-college-slate" data-mock="true">Environmental monitoring station</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ADMISSIONS PAGE CONTENT -->
+        <div id="admissions" class="page-content hidden">
+            <!-- Admissions Hero -->
+            <section class="bg-college-navy text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h1 class="font-serif text-4xl md:text-5xl font-bold mb-6">Admissions</h1>
+                        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                            Begin your journey at Riverview College. We're here to guide you through every step of the application process.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admissions Overview -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl font-bold text-college-navy mb-6">Join Our Community</h2>
+                        <p class="text-lg text-college-slate max-w-4xl mx-auto" data-mock="true">
+                            At Riverview College, we seek students who are intellectually curious, academically prepared, and ready to contribute to our vibrant campus community. Our holistic admissions process evaluates each applicant as a whole person, considering academic achievement, extracurricular involvement, personal qualities, and potential for growth.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="bg-college-blue w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-2xl" data-mock="true">3K+</span>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Students Enrolled</h3>
+                            <p class="text-college-slate">Diverse community from all backgrounds</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-college-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-2xl" data-mock="true">15:1</span>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Student-Faculty Ratio</h3>
+                            <p class="text-college-slate">Personalized attention and mentorship</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-2xl" data-mock="true">95%</span>
+                            </div>
+                            <h3 class="font-semibold text-xl mb-2">Job Placement Rate</h3>
+                            <p class="text-college-slate">Within 6 months of graduation</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Application Process -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Application Process</h2>
+                        <p class="text-lg text-college-slate">Follow these steps to complete your application</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="bg-college-blue w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold">1</span>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-3">Submit Application</h3>
+                            <p class="text-college-slate text-sm" data-mock="true">Complete the online application form with personal information and academic history.</p>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="bg-college-gold w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold">2</span>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-3">Submit Documents</h3>
+                            <p class="text-college-slate text-sm" data-mock="true">Send official transcripts, test scores, and letters of recommendation.</p>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="bg-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold">3</span>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-3">Interview (Optional)</h3>
+                            <p class="text-college-slate text-sm" data-mock="true">Participate in an interview with admissions staff or alumni.</p>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6 text-center">
+                            <div class="bg-green-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold">4</span>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-3">Decision</h3>
+                            <p class="text-college-slate text-sm" data-mock="true">Receive admissions decision and financial aid information.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Important Dates -->
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Important Dates</h2>
+                        <p class="text-lg text-college-slate">Mark your calendar with these key admissions deadlines</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card-shadow bg-white rounded-lg p-6">
+                            <h3 class="font-serif text-2xl font-bold text-college-navy mb-4">Fall 2024 Admission</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="font-medium" data-mock="true">Early Decision Deadline</span>
+                                    <span class="text-college-gold font-semibold" data-mock="true">November 15, 2023</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="font-medium" data-mock="true">Regular Decision Deadline</span>
+                                    <span class="text-college-gold font-semibold" data-mock="true">January 15, 2024</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="font-medium" data-mock="true">Decision Notification</span>
+                                    <span class="text-college-gold font-semibold" data-mock="true">March 15, 2024</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium" data-mock="true">Enrollment Deposit Due</span>
+                                    <span class="text-college-gold font-semibold" data-mock="true">May 1, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-6">
+                            <h3 class="font-serif text-2xl font-bold text-college-navy mb-4">Spring 2025 Admission</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="font-medium" data-mock="true">Application Deadline</span>
+                                    <span class="text-college-gold font-semibold" data-mock="true">October 1, 2024</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="font-medium" data-mock="true">Decision Notification</span>
+                                    <span class="text-college-gold font-semibold" data-mock="true">November 15, 2024</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="font-medium" data-mock="true">Enrollment Deposit Due</span>
+                                    <span class="text-college-gold font-semibold" data-mock="true">December 1, 2024</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium" data-mock="true">Classes Begin</span>
+                                    <span class="text-college-gold font-semibold" data-mock="true">January 15, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Eligibility Requirements -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Eligibility Requirements</h2>
+                        <p class="text-lg text-college-slate">Review the requirements for undergraduate and graduate programs</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card-shadow bg-white rounded-lg p-8">
+                            <h3 class="font-serif text-2xl font-bold text-college-navy mb-6 text-center">Undergraduate Programs</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">High school diploma or equivalent</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Minimum GPA of 3.0 on a 4.0 scale</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">SAT or ACT scores (optional for 2024)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Personal essay or statement of purpose</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Two letters of recommendation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Official high school transcripts</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-shadow bg-white rounded-lg p-8">
+                            <h3 class="font-serif text-2xl font-bold text-college-navy mb-6 text-center">Graduate Programs</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Bachelor's degree from accredited institution</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Minimum undergraduate GPA of 3.0</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">GRE scores (program dependent)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Statement of purpose</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Three letters of recommendation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-college-gold mr-3 mt-1"></i>
+                                    <span class="text-college-slate" data-mock="true">Official college transcripts</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apply Now Section -->
+            <section class="py-16">
+                <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-college-navy mb-4">Ready to Apply?</h2>
+                    <p class="text-lg text-college-slate mb-8" data-mock="true">
+                        Take the first step towards your academic future. Our admissions team is here to help you through the entire process.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <button class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg text-white" data-implementation="Link to application portal">
+                            <i class="fas fa-paper-plane mr-2"></i>Start Application
+                        </button>
+                        <button class="border-2 border-college-navy text-college-navy px-8 py-4 rounded-lg font-semibold text-lg hover:bg-college-navy hover:text-white transition-all duration-300">
+                            <i class="fas fa-calendar mr-2"></i>Schedule Visit
+                        </button>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="font-semibold text-lg text-college-navy mb-2">Need Help?</h3>
+                        <p class="text-college-slate mb-4" data-mock="true">Our admissions counselors are available to answer your questions and guide you through the application process.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-phone text-college-blue mr-2"></i>
+                                <span data-mock="true">(555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-envelope text-college-blue mr-2"></i>
+                                <span data-mock="true">admissions@riverview.edu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer - Consistent across all pages -->
+    <!-- @COMPONENT: Footer [contact info, address, links] -->
+    <footer class="bg-college-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-graduation-cap text-college-gold text-2xl mr-3"></i>
+                        <span class="font-serif font-semibold text-xl">Riverview College</span>
+                    </div>
+                    <p class="text-blue-100 mb-4" data-mock="true">
+                        Shaping tomorrow's leaders through academic excellence, innovation, and community engagement.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-100 hover:text-college-gold transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-100 hover:text-college-gold transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-100 hover:text-college-gold transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-100 hover:text-college-gold transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-blue-100 hover:text-college-gold transition-colors">About Us</a></li>
+                        <li><a href="#academics" class="text-blue-100 hover:text-college-gold transition-colors">Academics</a></li>
+                        <li><a href="#admissions" class="text-blue-100 hover:text-college-gold transition-colors">Admissions</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-college-gold transition-colors" data-mock="true">Student Life</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-college-gold transition-colors" data-mock="true">Alumni</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-college-gold mr-3 mt-1"></i>
+                            <div>
+                                <p class="text-blue-100" data-mock="true">123 Riverside Drive</p>
+                                <p class="text-blue-100" data-mock="true">Riverside, CA 92501</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-college-gold mr-3"></i>
+                            <p class="text-blue-100" data-mock="true">(555) 123-4567</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-college-gold mr-3"></i>
+                            <p class="text-blue-100" data-mock="true">info@riverview.edu</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Campus Hours</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-blue-100" data-mock="true">Monday - Friday</span>
+                            <span class="text-blue-100" data-mock="true">8:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-blue-100" data-mock="true">Saturday</span>
+                            <span class="text-blue-100" data-mock="true">9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-blue-100" data-mock="true">Sunday</span>
+                            <span class="text-blue-100" data-mock="true">12:00 PM - 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p class="text-blue-100" data-mock="true">© 2024 Riverview College of Arts & Science. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Navigation functionality
+            const navLinks = document.querySelectorAll('nav a[data-page]');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const pageContents = document.querySelectorAll('.page-content');
+
+            // Mobile menu toggle
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Page navigation
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    // Update active navigation
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active-nav');
+                        navLink.classList.add('text-college-slate', 'hover:text-college-navy', 'hover:bg-gray-100');
+                    });
+                    
+                    // Set active nav for both desktop and mobile
+                    document.querySelectorAll(`[data-page="${targetPage}"]`).forEach(activeLink => {
+                        activeLink.classList.add('active-nav');
+                        activeLink.classList.remove('text-college-slate', 'hover:text-college-navy', 'hover:bg-gray-100');
+                    });
+
+                    // Show target page content
+                    pageContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    const targetContent = document.getElementById(targetPage);
+                    if (targetContent) {
+                        targetContent.classList.remove('hidden');
+                    }
+
+                    // Update page title
+                    const pageTitle = targetPage.charAt(0).toUpperCase() + targetPage.slice(1);
+                    document.title = `Riverview College of Arts & Science - ${pageTitle}`;
+
+                    // Close mobile menu if open
+                    if (mobileMenu) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+
+            // TODO: Implement form submissions, API calls, and other business logic
+            // TODO: Add form validation for application forms
+            // TODO: Integrate with actual admissions system
+        })();
+    </script>
+</body>
+</html>
