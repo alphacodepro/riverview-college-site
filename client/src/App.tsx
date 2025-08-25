@@ -14,11 +14,11 @@ import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
   const [location] = useLocation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-  
+
   return null;
 }
 
@@ -35,6 +35,19 @@ function Router() {
 }
 
 function App() {
+  // 🔹 Inject Chatbot Script on mount
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://chatbot.xyzcollege.edu/widget.js"; // your exact widget script
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script); // cleanup on unmount
+    };
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
